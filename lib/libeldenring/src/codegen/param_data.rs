@@ -4,9 +4,8 @@
 use std::collections::HashMap;
 use std::ffi::c_void;
 
-use macro_param::ParamStruct;
 use once_cell::sync::Lazy;
-
+use macro_param::ParamStruct;
 use crate::prelude::*;
 
 unsafe fn get_lambda<T: ParamStruct>() -> BoxedVisitorLambda {
@@ -31,16 +30,12 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("AssetMaterialSfxParam".to_string(), unsafe { get_lambda::<AssetMaterialSfxParam>() }),
         ("AssetModelSfxParam".to_string(), unsafe { get_lambda::<AssetModelSfxParam>() }),
         ("AtkParam".to_string(), unsafe { get_lambda::<AtkParam>() }),
-        ("AttackElementCorrectParam".to_string(), unsafe {
-            get_lambda::<AttackElementCorrectParam>()
-        }),
+        ("AttackElementCorrectParam".to_string(), unsafe { get_lambda::<AttackElementCorrectParam>() }),
         ("AutoCreateEnvSoundParam".to_string(), unsafe { get_lambda::<AutoCreateEnvSoundParam>() }),
         ("BaseChrSelectMenuParam".to_string(), unsafe { get_lambda::<BaseChrSelectMenuParam>() }),
         ("BehaviorParam".to_string(), unsafe { get_lambda::<BehaviorParam>() }),
         ("BonfireWarpParam".to_string(), unsafe { get_lambda::<BonfireWarpParam>() }),
-        ("BonfireWarpSubCategoryParam".to_string(), unsafe {
-            get_lambda::<BonfireWarpSubCategoryParam>()
-        }),
+        ("BonfireWarpSubCategoryParam".to_string(), unsafe { get_lambda::<BonfireWarpSubCategoryParam>() }),
         ("BonfireWarpTabParam".to_string(), unsafe { get_lambda::<BonfireWarpTabParam>() }),
         ("BuddyParam".to_string(), unsafe { get_lambda::<BuddyParam>() }),
         ("BuddyStoneParam".to_string(), unsafe { get_lambda::<BuddyStoneParam>() }),
@@ -51,31 +46,20 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("CameraFadeParam".to_string(), unsafe { get_lambda::<CameraFadeParam>() }),
         ("CeremonyParam".to_string(), unsafe { get_lambda::<CeremonyParam>() }),
         ("CharaInitParam".to_string(), unsafe { get_lambda::<CharaInitParam>() }),
-        ("CharMakeMenuListItemParam".to_string(), unsafe {
-            get_lambda::<CharMakeMenuListItemParam>()
-        }),
+        ("CharMakeMenuListItemParam".to_string(), unsafe { get_lambda::<CharMakeMenuListItemParam>() }),
         ("CharMakeMenuTopParam".to_string(), unsafe { get_lambda::<CharMakeMenuTopParam>() }),
-        ("ChrActivateConditionParam".to_string(), unsafe {
-            get_lambda::<ChrActivateConditionParam>()
-        }),
+        ("ChrActivateConditionParam".to_string(), unsafe { get_lambda::<ChrActivateConditionParam>() }),
+        ("ChrEquipModelParam".to_string(), unsafe { get_lambda::<ChrEquipModelParam>() }),
         ("ChrModelParam".to_string(), unsafe { get_lambda::<ChrModelParam>() }),
         ("ClearCountCorrectParam".to_string(), unsafe { get_lambda::<ClearCountCorrectParam>() }),
         ("CommonSystemParam".to_string(), unsafe { get_lambda::<CommonSystemParam>() }),
         ("CoolTimeParam".to_string(), unsafe { get_lambda::<CoolTimeParam>() }),
         ("CutsceneGparamTimeParam".to_string(), unsafe { get_lambda::<CutsceneGparamTimeParam>() }),
-        ("CutsceneGparamWeatherParam".to_string(), unsafe {
-            get_lambda::<CutsceneGparamWeatherParam>()
-        }),
+        ("CutsceneGparamWeatherParam".to_string(), unsafe { get_lambda::<CutsceneGparamWeatherParam>() }),
         ("CutsceneMapIdParam".to_string(), unsafe { get_lambda::<CutsceneMapIdParam>() }),
-        ("CutSceneTextureLoadParam".to_string(), unsafe {
-            get_lambda::<CutSceneTextureLoadParam>()
-        }),
-        ("CutsceneTimezoneConvertParam".to_string(), unsafe {
-            get_lambda::<CutsceneTimezoneConvertParam>()
-        }),
-        ("CutsceneWeatherOverrideGparamIdConvertParam".to_string(), unsafe {
-            get_lambda::<CutsceneWeatherOverrideGparamIdConvertParam>()
-        }),
+        ("CutSceneTextureLoadParam".to_string(), unsafe { get_lambda::<CutSceneTextureLoadParam>() }),
+        ("CutsceneTimezoneConvertParam".to_string(), unsafe { get_lambda::<CutsceneTimezoneConvertParam>() }),
+        ("CutsceneWeatherOverrideGparamIdConvertParam".to_string(), unsafe { get_lambda::<CutsceneWeatherOverrideGparamIdConvertParam>() }),
         ("DecalParam".to_string(), unsafe { get_lambda::<DecalParam>() }),
         ("DirectionCameraParam".to_string(), unsafe { get_lambda::<DirectionCameraParam>() }),
         ("EnemyCommonParam".to_string(), unsafe { get_lambda::<EnemyCommonParam>() }),
@@ -93,6 +77,7 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("FaceParam".to_string(), unsafe { get_lambda::<FaceParam>() }),
         ("FaceRangeParam".to_string(), unsafe { get_lambda::<FaceRangeParam>() }),
         ("FeTextEffectParam".to_string(), unsafe { get_lambda::<FeTextEffectParam>() }),
+        ("FinalDamageRateParam".to_string(), unsafe { get_lambda::<FinalDamageRateParam>() }),
         ("FootSfxParam".to_string(), unsafe { get_lambda::<FootSfxParam>() }),
         ("GameAreaParam".to_string(), unsafe { get_lambda::<GameAreaParam>() }),
         ("GameInfoParam".to_string(), unsafe { get_lambda::<GameInfoParam>() }),
@@ -102,21 +87,14 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("Gconfig_DOFQuality".to_string(), unsafe { get_lambda::<Gconfig_DOFQuality>() }),
         ("Gconfig_EffectQuality".to_string(), unsafe { get_lambda::<Gconfig_EffectQuality>() }),
         ("Gconfig_LightingQuality".to_string(), unsafe { get_lambda::<Gconfig_LightingQuality>() }),
-        ("Gconfig_MotionBlurQuality".to_string(), unsafe {
-            get_lambda::<Gconfig_MotionBlurQuality>()
-        }),
-        ("Gconfig_ReflectionQuality".to_string(), unsafe {
-            get_lambda::<Gconfig_ReflectionQuality>()
-        }),
+        ("Gconfig_MotionBlurQuality".to_string(), unsafe { get_lambda::<Gconfig_MotionBlurQuality>() }),
+        ("Gconfig_RaytracingQuality".to_string(), unsafe { get_lambda::<Gconfig_RaytracingQuality>() }),
+        ("Gconfig_ReflectionQuality".to_string(), unsafe { get_lambda::<Gconfig_ReflectionQuality>() }),
         ("Gconfig_ShaderQuality".to_string(), unsafe { get_lambda::<Gconfig_ShaderQuality>() }),
         ("Gconfig_ShadowQuality".to_string(), unsafe { get_lambda::<Gconfig_ShadowQuality>() }),
         ("Gconfig_SSAOQuality".to_string(), unsafe { get_lambda::<Gconfig_SSAOQuality>() }),
-        ("Gconfig_TextureFilterQuality".to_string(), unsafe {
-            get_lambda::<Gconfig_TextureFilterQuality>()
-        }),
-        ("Gconfig_VolumetricEffectQuality".to_string(), unsafe {
-            get_lambda::<Gconfig_VolumetricEffectQuality>()
-        }),
+        ("Gconfig_TextureFilterQuality".to_string(), unsafe { get_lambda::<Gconfig_TextureFilterQuality>() }),
+        ("Gconfig_VolumetricEffectQuality".to_string(), unsafe { get_lambda::<Gconfig_VolumetricEffectQuality>() }),
         ("Gconfig_WaterQuality".to_string(), unsafe { get_lambda::<Gconfig_WaterQuality>() }),
         ("GestureParam".to_string(), unsafe { get_lambda::<GestureParam>() }),
         ("GparamGridRegionInfo".to_string(), unsafe { get_lambda::<GparamGridRegionInfo>() }),
@@ -127,41 +105,30 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("GrassMapSettings".to_string(), unsafe { get_lambda::<GrassMapSettings>() }),
         ("GrassTypeParam".to_string(), unsafe { get_lambda::<GrassTypeParam>() }),
         ("HitEffectSeParam".to_string(), unsafe { get_lambda::<HitEffectSeParam>() }),
-        ("HitEffectSfxConceptParam".to_string(), unsafe {
-            get_lambda::<HitEffectSfxConceptParam>()
-        }),
+        ("HitEffectSfxConceptParam".to_string(), unsafe { get_lambda::<HitEffectSfxConceptParam>() }),
         ("HitEffectSfxParam".to_string(), unsafe { get_lambda::<HitEffectSfxParam>() }),
         ("HitMtrlParam".to_string(), unsafe { get_lambda::<HitMtrlParam>() }),
         ("ItemLotParam".to_string(), unsafe { get_lambda::<ItemLotParam>() }),
         ("KeyAssignMenuItemParam".to_string(), unsafe { get_lambda::<KeyAssignMenuItemParam>() }),
         ("KeyAssignParam".to_string(), unsafe { get_lambda::<KeyAssignParam>() }),
         ("KnockBackParam".to_string(), unsafe { get_lambda::<KnockBackParam>() }),
-        ("KnowledgeLoadScreenItemParam".to_string(), unsafe {
-            get_lambda::<KnowledgeLoadScreenItemParam>()
-        }),
-        ("LegacyDistantViewPartsReplaceParam".to_string(), unsafe {
-            get_lambda::<LegacyDistantViewPartsReplaceParam>()
-        }),
-        ("LoadBalancerDrawDistScaleParam".to_string(), unsafe {
-            get_lambda::<LoadBalancerDrawDistScaleParam>()
-        }),
-        ("LoadBalancerNewDrawDistScaleParam".to_string(), unsafe {
-            get_lambda::<LoadBalancerNewDrawDistScaleParam>()
-        }),
+        ("KnowledgeLoadScreenItemParam".to_string(), unsafe { get_lambda::<KnowledgeLoadScreenItemParam>() }),
+        ("LegacyDistantViewPartsReplaceParam".to_string(), unsafe { get_lambda::<LegacyDistantViewPartsReplaceParam>() }),
+        ("LoadBalancerDrawDistScaleParam".to_string(), unsafe { get_lambda::<LoadBalancerDrawDistScaleParam>() }),
+        ("LoadBalancerNewDrawDistScaleParam".to_string(), unsafe { get_lambda::<LoadBalancerNewDrawDistScaleParam>() }),
         ("LoadBalancerParam".to_string(), unsafe { get_lambda::<LoadBalancerParam>() }),
         ("LockCamParam".to_string(), unsafe { get_lambda::<LockCamParam>() }),
         ("MagicParam".to_string(), unsafe { get_lambda::<MagicParam>() }),
         ("MapDefaultInfoParam".to_string(), unsafe { get_lambda::<MapDefaultInfoParam>() }),
         ("MapGdRegionDrawParam".to_string(), unsafe { get_lambda::<MapGdRegionDrawParam>() }),
         ("MapGdRegionInfo".to_string(), unsafe { get_lambda::<MapGdRegionInfo>() }),
-        ("MapGridCreateHeightLimitInfo".to_string(), unsafe {
-            get_lambda::<MapGridCreateHeightLimitInfo>()
-        }),
-        ("MapMimicryEstablishmentParam".to_string(), unsafe {
-            get_lambda::<MapMimicryEstablishmentParam>()
-        }),
+        ("MapGridCreateHeightDetailLimitInfo".to_string(), unsafe { get_lambda::<MapGridCreateHeightDetailLimitInfo>() }),
+        ("MapGridCreateHeightLimitInfo".to_string(), unsafe { get_lambda::<MapGridCreateHeightLimitInfo>() }),
+        ("MapMimicryEstablishmentParam".to_string(), unsafe { get_lambda::<MapMimicryEstablishmentParam>() }),
         ("MapNameTexParam".to_string(), unsafe { get_lambda::<MapNameTexParam>() }),
+        ("MapNameTexParam_m61".to_string(), unsafe { get_lambda::<MapNameTexParam_m61>() }),
         ("MapPieceTexParam".to_string(), unsafe { get_lambda::<MapPieceTexParam>() }),
+        ("MapPieceTexParam_m61".to_string(), unsafe { get_lambda::<MapPieceTexParam_m61>() }),
         ("MaterialEx".to_string(), unsafe { get_lambda::<MaterialEx>() }),
         ("MenuCommonParam".to_string(), unsafe { get_lambda::<MenuCommonParam>() }),
         ("MenuOffscrRendParam".to_string(), unsafe { get_lambda::<MenuOffscrRendParam>() }),
@@ -169,26 +136,19 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("MenuPropertyLayoutParam".to_string(), unsafe { get_lambda::<MenuPropertyLayoutParam>() }),
         ("MenuPropertySpecParam".to_string(), unsafe { get_lambda::<MenuPropertySpecParam>() }),
         ("MenuValueTableSpecParam".to_string(), unsafe { get_lambda::<MenuValueTableSpecParam>() }),
-        ("MimicryEstablishmentTexParam".to_string(), unsafe {
-            get_lambda::<MimicryEstablishmentTexParam>()
-        }),
+        ("MimicryEstablishmentTexParam".to_string(), unsafe { get_lambda::<MimicryEstablishmentTexParam>() }),
+        ("MimicryEstablishmentTexParam_m61".to_string(), unsafe { get_lambda::<MimicryEstablishmentTexParam_m61>() }),
         ("MissileParam".to_string(), unsafe { get_lambda::<MissileParam>() }),
         ("ModelSfxParam".to_string(), unsafe { get_lambda::<ModelSfxParam>() }),
         ("MoveParam".to_string(), unsafe { get_lambda::<MoveParam>() }),
-        ("MultiEstusFlaskBonusParam".to_string(), unsafe {
-            get_lambda::<MultiEstusFlaskBonusParam>()
-        }),
-        ("MultiPlayCorrectionParam".to_string(), unsafe {
-            get_lambda::<MultiPlayCorrectionParam>()
-        }),
+        ("MultiEstusFlaskBonusParam".to_string(), unsafe { get_lambda::<MultiEstusFlaskBonusParam>() }),
+        ("MultiPlayCorrectionParam".to_string(), unsafe { get_lambda::<MultiPlayCorrectionParam>() }),
         ("MultiSoulBonusRateParam".to_string(), unsafe { get_lambda::<MultiSoulBonusRateParam>() }),
         ("NetworkAreaParam".to_string(), unsafe { get_lambda::<NetworkAreaParam>() }),
         ("NetworkMsgParam".to_string(), unsafe { get_lambda::<NetworkMsgParam>() }),
         ("NetworkParam".to_string(), unsafe { get_lambda::<NetworkParam>() }),
         ("NpcAiActionParam".to_string(), unsafe { get_lambda::<NpcAiActionParam>() }),
-        ("NpcAiBehaviorProbabilityParam".to_string(), unsafe {
-            get_lambda::<NpcAiBehaviorProbabilityParam>()
-        }),
+        ("NpcAiBehaviorProbabilityParam".to_string(), unsafe { get_lambda::<NpcAiBehaviorProbabilityParam>() }),
         ("NpcParam".to_string(), unsafe { get_lambda::<NpcParam>() }),
         ("NpcThinkParam".to_string(), unsafe { get_lambda::<NpcThinkParam>() }),
         ("ObjActParam".to_string(), unsafe { get_lambda::<ObjActParam>() }),
@@ -199,16 +159,10 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("PhantomParam".to_string(), unsafe { get_lambda::<PhantomParam>() }),
         ("PlayerCommonParam".to_string(), unsafe { get_lambda::<PlayerCommonParam>() }),
         ("PlayRegionParam".to_string(), unsafe { get_lambda::<PlayRegionParam>() }),
-        ("PostureControlParam_Gender".to_string(), unsafe {
-            get_lambda::<PostureControlParam_Gender>()
-        }),
+        ("PostureControlParam_Gender".to_string(), unsafe { get_lambda::<PostureControlParam_Gender>() }),
         ("PostureControlParam_Pro".to_string(), unsafe { get_lambda::<PostureControlParam_Pro>() }),
-        ("PostureControlParam_WepLeft".to_string(), unsafe {
-            get_lambda::<PostureControlParam_WepLeft>()
-        }),
-        ("PostureControlParam_WepRight".to_string(), unsafe {
-            get_lambda::<PostureControlParam_WepRight>()
-        }),
+        ("PostureControlParam_WepLeft".to_string(), unsafe { get_lambda::<PostureControlParam_WepLeft>() }),
+        ("PostureControlParam_WepRight".to_string(), unsafe { get_lambda::<PostureControlParam_WepRight>() }),
         ("RandomAppearEditParam".to_string(), unsafe { get_lambda::<RandomAppearEditParam>() }),
         ("RandomAppearParam".to_string(), unsafe { get_lambda::<RandomAppearParam>() }),
         ("ReinforceParamProtector".to_string(), unsafe { get_lambda::<ReinforceParamProtector>() }),
@@ -224,18 +178,12 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("SfxBlockResShareParam".to_string(), unsafe { get_lambda::<SfxBlockResShareParam>() }),
         ("ShopLineupParam".to_string(), unsafe { get_lambda::<ShopLineupParam>() }),
         ("SignPuddleParam".to_string(), unsafe { get_lambda::<SignPuddleParam>() }),
-        ("SoundAssetSoundObjEnableDistParam".to_string(), unsafe {
-            get_lambda::<SoundAssetSoundObjEnableDistParam>()
-        }),
-        ("SoundAutoEnvSoundGroupParam".to_string(), unsafe {
-            get_lambda::<SoundAutoEnvSoundGroupParam>()
-        }),
-        ("SoundAutoReverbEvaluationDistParam".to_string(), unsafe {
-            get_lambda::<SoundAutoReverbEvaluationDistParam>()
-        }),
-        ("SoundAutoReverbSelectParam".to_string(), unsafe {
-            get_lambda::<SoundAutoReverbSelectParam>()
-        }),
+        ("SignPuddleSubCategoryParam".to_string(), unsafe { get_lambda::<SignPuddleSubCategoryParam>() }),
+        ("SignPuddleTabParam".to_string(), unsafe { get_lambda::<SignPuddleTabParam>() }),
+        ("SoundAssetSoundObjEnableDistParam".to_string(), unsafe { get_lambda::<SoundAssetSoundObjEnableDistParam>() }),
+        ("SoundAutoEnvSoundGroupParam".to_string(), unsafe { get_lambda::<SoundAutoEnvSoundGroupParam>() }),
+        ("SoundAutoReverbEvaluationDistParam".to_string(), unsafe { get_lambda::<SoundAutoReverbEvaluationDistParam>() }),
+        ("SoundAutoReverbSelectParam".to_string(), unsafe { get_lambda::<SoundAutoReverbSelectParam>() }),
         ("SoundChrPhysicsSeParam".to_string(), unsafe { get_lambda::<SoundChrPhysicsSeParam>() }),
         ("SoundCommonIngameParam".to_string(), unsafe { get_lambda::<SoundCommonIngameParam>() }),
         ("SoundCommonSystemParam".to_string(), unsafe { get_lambda::<SoundCommonSystemParam>() }),
@@ -252,11 +200,10 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("TutorialParam".to_string(), unsafe { get_lambda::<TutorialParam>() }),
         ("WaypointParam".to_string(), unsafe { get_lambda::<WaypointParam>() }),
         ("WeatherAssetCreateParam".to_string(), unsafe { get_lambda::<WeatherAssetCreateParam>() }),
-        ("WeatherAssetReplaceParam".to_string(), unsafe {
-            get_lambda::<WeatherAssetReplaceParam>()
-        }),
+        ("WeatherAssetReplaceParam".to_string(), unsafe { get_lambda::<WeatherAssetReplaceParam>() }),
         ("WeatherLotParam".to_string(), unsafe { get_lambda::<WeatherLotParam>() }),
         ("WeatherLotTexParam".to_string(), unsafe { get_lambda::<WeatherLotTexParam>() }),
+        ("WeatherLotTexParam_m61".to_string(), unsafe { get_lambda::<WeatherLotTexParam_m61>() }),
         ("WeatherParam".to_string(), unsafe { get_lambda::<WeatherParam>() }),
         ("WepAbsorpPosParam".to_string(), unsafe { get_lambda::<WepAbsorpPosParam>() }),
         ("WetAspectParam".to_string(), unsafe { get_lambda::<WetAspectParam>() }),
@@ -265,12 +212,8 @@ pub static PARAM_VTABLE: Lazy<HashMap<String, BoxedVisitorLambda>> = Lazy::new(|
         ("WorldMapPieceParam".to_string(), unsafe { get_lambda::<WorldMapPieceParam>() }),
         ("WorldMapPlaceNameParam".to_string(), unsafe { get_lambda::<WorldMapPlaceNameParam>() }),
         ("WorldMapPointParam".to_string(), unsafe { get_lambda::<WorldMapPointParam>() }),
-        ("WwiseValueToStrConvertParamFormat".to_string(), unsafe {
-            get_lambda::<WwiseValueToStrConvertParamFormat>()
-        }),
-    ]
-    .into_iter()
-    .collect()
+        ("WwiseValueToStrConvertParamFormat".to_string(), unsafe { get_lambda::<WwiseValueToStrConvertParamFormat>() }),
+    ].into_iter().collect()
 });
 #[derive(ParamStruct, Debug)]
 #[repr(C)]
@@ -1679,6 +1622,14 @@ pub struct ChrActivateConditionParam {
     pub time_end_hour: u8,
     pub time_end_min: u8,
     pub pad2: [u8; 2],
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
+pub struct ChrEquipModelParam {
+    pub unknown_0x0: i32,
+    pub unknown_0x4: i32,
+    pub unknown_0x8: i32,
 }
 
 #[derive(ParamStruct, Debug)]
@@ -3361,6 +3312,18 @@ pub struct FeTextEffectParam {
 
 #[derive(ParamStruct, Debug)]
 #[repr(C)]
+pub struct FinalDamageRateParam {
+    pub phys_rate: f32,
+    pub mag_rate: f32,
+    pub fire_rate: f32,
+    pub thun_rate: f32,
+    pub dark_rate: f32,
+    pub stamina_rate: f32,
+    pub sa_rate: f32,
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
 pub struct FootSfxParam {
     pub sfx_id_00: u32,
     pub sfx_id_01: u32,
@@ -3807,13 +3770,10 @@ pub struct GameSystemCommonParam {
     pub ai_sight_rate_sunloss_light: f32,
     pub ai_sight_rate_sunloss_dark: f32,
     pub ai_sight_rate_sunloss_very_dark: f32,
-    pub stealth_system_sight_angle_reduce_rate_not_in_stealth_rigid_not_sight_hide_stealth_mode:
-        f32,
-    pub stealth_system_sight_angle_reduce_rate_not_in_stealth_rigid_sight_hide_not_stealth_mode:
-        f32,
+    pub stealth_system_sight_angle_reduce_rate_not_in_stealth_rigid_not_sight_hide_stealth_mode: f32,
+    pub stealth_system_sight_angle_reduce_rate_not_in_stealth_rigid_sight_hide_not_stealth_mode: f32,
     pub stealth_system_sight_angle_reduce_rate_not_in_stealth_rigid_sight_hide_stealth_mode: f32,
-    pub stealth_system_sight_angle_reduce_rate_in_stealth_rigid_not_sight_hide_not_stealth_mode:
-        f32,
+    pub stealth_system_sight_angle_reduce_rate_in_stealth_rigid_not_sight_hide_not_stealth_mode: f32,
     pub stealth_system_sight_angle_reduce_rate_in_stealth_rigid_not_sight_hide_stealth_mode: f32,
     pub stealth_system_sight_angle_reduce_rate_in_stealth_rigid_sight_hide_not_stealth_mode: f32,
     pub stealth_system_sight_angle_reduce_rate_in_stealth_rigid_sight_hide_stealth_mode: f32,
@@ -3963,6 +3923,21 @@ pub struct Gconfig_MotionBlurQuality {
     pub sample_count_bias: i32,
     pub recurrence_count_bias: i32,
     pub blur_max_length_scale: f32,
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
+pub struct Gconfig_RaytracingQuality {
+    pub enable_raytrace_ao: u8,
+    pub enable_raytrace_shadows: u8,
+    pub unk0x02: u8,
+    pub unk0x03: u8,
+    pub unk_float0x04: f32,
+    pub unk0x08: i32,
+    pub unk_float0x0_c: f32,
+    pub unk0x10: i32,
+    pub penumbra_size: f32,
+    pub render_distance: f32,
 }
 
 #[derive(ParamStruct, Debug)]
@@ -4824,6 +4799,32 @@ pub struct MapGdRegionInfo {
 
 #[derive(ParamStruct, Debug)]
 #[repr(C)]
+pub struct MapGridCreateHeightDetailLimitInfo {
+    pub map_id: i32,
+    pub unknown_0x4: i32,
+    pub unknown_0x8: i32,
+    pub unknown_0xc: i32,
+    pub unknown_0x10: i32,
+    pub unknown_0x14: i32,
+    pub unknown_0x18: i32,
+    pub unknown_0x1c: i32,
+    pub unknown_0x20: i32,
+    pub unknown_0x24: i32,
+    pub unknown_0x28: i32,
+    pub unknown_0x2c: u8,
+    pub unknown_0x2d: u8,
+    pub unknown_0x2e: u8,
+    pub unknown_0x2f: u8,
+    pub unknown_0x30: u8,
+    pub unknown_0x31: u8,
+    pub unknown_0x32: u16,
+    pub unknown_0x34: i32,
+    pub unknown_0x38: i32,
+    pub unknown_0x3c: i32,
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
 pub struct MapGridCreateHeightLimitInfo {
     pub grid_enable_create_height_min: f32,
     pub grid_enable_create_height_max: f32,
@@ -4862,6 +4863,27 @@ pub struct MapNameTexParam {
 
 #[derive(ParamStruct, Debug)]
 #[repr(C)]
+pub struct MapNameTexParam_m61 {
+    pub disable_param_reserve2: [u8; 3],
+    pub src_r: u8,
+    pub src_g: u8,
+    pub src_b: u8,
+    pub pad1: [u8; 1],
+    pub map_name_id: i32,
+    pub unknown_0xc: i32,
+    pub unknown_0x10: u8,
+    pub unknown_0x11: u8,
+    pub unknown_0x12: u8,
+    pub unknown_0x13: u8,
+    pub unknown_0x14: i32,
+    pub unknown_text_id_1: i32,
+    pub unknown_text_id_2: i32,
+    pub unknown_0x20: i32,
+    pub unknown_0x24: i32,
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
 pub struct MapPieceTexParam {
     pub disable_param_reserve2: [u8; 3],
     pub src_r: u8,
@@ -4870,6 +4892,24 @@ pub struct MapPieceTexParam {
     pub pad1: [u8; 1],
     pub save_map_name_id: i32,
     pub multi_play_area_id: i32,
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
+pub struct MapPieceTexParam_m61 {
+    pub disable_param_reserve2: [u8; 3],
+    pub src_r: u8,
+    pub src_g: u8,
+    pub src_b: u8,
+    pub pad1: [u8; 1],
+    pub save_map_name_id: i32,
+    pub multi_play_area_id: i32,
+    pub unknown_0x10: i32,
+    pub unknown_0x14: i32,
+    pub unknown_0x18: i32,
+    pub unknown_0x1c: i32,
+    pub unknown_play_region_1: i32,
+    pub unknown_play_region_2: i32,
 }
 
 #[derive(ParamStruct, Debug)]
@@ -5027,6 +5067,22 @@ pub struct MimicryEstablishmentTexParam {
     pub pad1: [u8; 1],
     pub mimicry_establishment_param_id: i32,
     pub pad2: [u8; 4],
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
+pub struct MimicryEstablishmentTexParam_m61 {
+    pub disable_param_reserve2: [u8; 3],
+    pub src_r: u8,
+    pub src_g: u8,
+    pub src_b: u8,
+    pub pad1: [u8; 1],
+    pub mimicry_establishment_param_id: i32,
+    pub unknown_0xc: i32,
+    pub unknown_0x10: i32,
+    pub unknown_0x14: i32,
+    pub unknown_0x18: i32,
+    pub unknown_0x1c: i32,
 }
 
 #[derive(ParamStruct, Debug)]
@@ -7000,6 +7056,25 @@ pub struct SignPuddleParam {
 
 #[derive(ParamStruct, Debug)]
 #[repr(C)]
+pub struct SignPuddleSubCategoryParam {
+    pub start_pad: [u8; 4],
+    pub sign_puddle_category_text: i32,
+    pub sign_puddle_tab_id: u16,
+    pub unknown_0xa: u16,
+    pub end_pad: [u8; 4],
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
+pub struct SignPuddleTabParam {
+    pub is_dlc_tab: i32,
+    pub tab_text_id: i32,
+    pub unknown_0x8: i32,
+    pub unknown_0xc: i32,
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
 pub struct SoundAssetSoundObjEnableDistParam {
     pub sound_obj_enable_dist: f32,
 }
@@ -7838,6 +7913,21 @@ pub struct WeatherLotTexParam {
     pub pad1: [u8; 1],
     pub weather_log_id: i32,
     pub pad2: [u8; 4],
+}
+
+#[derive(ParamStruct, Debug)]
+#[repr(C)]
+pub struct WeatherLotTexParam_m61 {
+    pub disable_param_reserve2: [u8; 3],
+    pub src_r: u8,
+    pub src_g: u8,
+    pub src_b: u8,
+    pub pad1: [u8; 1],
+    pub weather_log_id: i32,
+    pub unknown_0xc: i32,
+    pub unknown_0x10: i32,
+    pub unknown_0x14: i32,
+    pub unknown_0x18: i32,
 }
 
 #[derive(ParamStruct, Debug)]
